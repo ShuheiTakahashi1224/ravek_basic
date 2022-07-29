@@ -22,6 +22,7 @@
 }
 .p-header__right {
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 .p-header_nav {
@@ -34,9 +35,16 @@
   }
 }
 .p-header_nav__link {
+  display: inline-block;
+  height: 50px;
   font-size: 14px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 50px;
+  transition: color, transform 0.3s ease 0s;
+  @include hover() {
+    color: $font_purple;
+    transform: scale(1.1);
+  }
 }
 .p-header__button {
   margin-left: 14px;
