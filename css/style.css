@@ -597,6 +597,7 @@ body {
 
 .p-header__right {
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
@@ -610,9 +611,18 @@ body {
 }
 
 .p-header_nav__link {
+  display: inline-block;
+  height: 50px;
   font-size: 14px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 50px;
+  transition: color, transform 0.3s ease 0s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .p-header_nav__link:hover {
+    color: #64629d;
+    transform: scale(1.1);
+  }
 }
 
 .p-header__button {
