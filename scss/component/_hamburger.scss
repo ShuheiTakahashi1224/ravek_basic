@@ -1,0 +1,68 @@
+.c-hamburger {
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+  width: 21px;
+  height: 50px;
+}
+
+.c-hamburger span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 21px;
+  height: 3px;
+  border-radius: 5px;
+  background: $font_purple;
+}
+
+.c-hamburger span:nth-of-type(1) {
+  top: 20px;
+}
+
+.c-hamburger span:nth-of-type(2) {
+  top: 26px;
+}
+
+.c-hamburger span:nth-of-type(3) {
+  top: 32px;
+}
+
+.c-hamburger span:nth-of-type(1)::after {
+  content: "Menu";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0.6);
+  color: $font_purple;
+  font-size: 10px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.c-hamburger.is-active span:nth-of-type(1) {
+  top: 21px;
+  left: 50%;
+  transform: translate(-50%, 6px) rotate(-45deg);
+  width: 24px;
+}
+
+.c-hamburger.is-active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.c-hamburger.is-active span:nth-of-type(3) {
+  top: 33px;
+  left: 50%;
+  transform: translate(-50%, -6px) rotate(45deg);
+  width: 24px;
+}
+
+.c-hamburger.is-active span:nth-of-type(1)::after {
+  content: "Close";
+  transform: translateY(0) rotate(45deg) scale(0.6);
+  bottom: 6px;
+  left: 5px;
+}

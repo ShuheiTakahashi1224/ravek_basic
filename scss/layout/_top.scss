@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.l-top {
+  margin-top: $header_height_pc;
+  @include responsive(sp) {
+    margin-top: $header_height_sp;
+  }
+}

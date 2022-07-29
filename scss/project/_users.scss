@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.p-users {
+  background: $white;
+}
+.p-users_inner {
+  padding: 100px 0;
+  @include responsive(sp) {
+    padding: 60px 0;
+  }
+}
+.p-users_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 50px 40px;
+  width: 972px;
+  margin: 40px auto 0;
+  @include responsive(sp) {
+    gap: 12px 11px;
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+.p-users_list__image {
+  width: 100%;
+}

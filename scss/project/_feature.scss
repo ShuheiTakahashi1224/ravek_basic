@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+.p-feature {
+  background: $base_gray;
+}
+.p-feature_inner {
+  padding: 100px 0;
+}
+.p-feature_list {
+  margin-top: 100px;
+}
+.p-feature_list__item {
+  display: flex;
+  align-items: flex-end;
+  @include responsive(sp) {
+    flex-direction: column-reverse;
+    align-items: center;
+    &:not(:first-of-type) {
+      margin-top: 60px;
+    }
+  }
+}
+.p-feature_list__item--reverse {
+  @include responsive(pc) {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-top: 150px;
+    margin-bottom: -78px;
+  }
+}
+.p-feature_image_container {
+  flex: 1 0 auto;
+  width: 520px;
+  height: 520px;
+  @include responsive(pc) {
+    margin-left: -74px;
+  }
+  @include responsive(sp) {
+    width: 280px;
+    height: 280px;
+    margin-bottom: -75px;
+    position: relative;
+  }
+}
+.p-feature_image_container--reverse {
+  @include responsive(pc) {
+    margin-right: -74px;
+    margin-left: 0;
+  }
+}
+.p-feature_image {
+  width: 100%;
+  height: auto;
+}
+.p-feature_item {
+  flex: 1 0 auto;
+  width: 742px;
+  height: 367px;
+  background: $white;
+  padding: 65px 0 0 148px;
+  border-radius: 30px;
+  @include responsive(sp) {
+    width: 100vw;
+    height: auto;
+    padding: 82px 20px 40px;
+  }
+}
+.p-feature_item__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: calc(52.1 / 36);
+  white-space: nowrap;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -18px;
+    width: 90px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: top left;
+    transform: translate(-100%, 0);
+  }
+  @include responsive(sp) {
+    font-size: 22px;
+    &::before {
+      top: 0;
+      left: 0;
+      width: 53px;
+      height: 42px;
+      background-size: 100%;
+      transform: translate(0, -100%);
+    }
+  }
+}
+.p-feature_item__title--01 {
+  &::before {
+    background-image: url("/img/img_number_01.svg");
+    background-size: 80%;
+    @include responsive(sp) {
+      background-size: 90%;
+    }
+  }
+}
+.p-feature_item__title--02 {
+  &::before {
+    background-image: url("/img/img_number_02.svg");
+  }
+}
+.p-feature_item__title--03 {
+  &::before {
+    background-image: url("/img/img_number_03.svg");
+  }
+}
+.p-feature_item__description {
+  width: 470px;
+  margin-top: 17px;
+  @include responsive(sp) {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.c-button {
+  display: inline-block;
+  color: $white;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  background: $font_purple;
+  border: 2px solid $font_purple;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease 0s;
+  white-space: nowrap;
+  @include hover() {
+    color: $font_purple;
+    background: $white;
+  }
+}
+.c-button--oppose {
+  color: $font_purple;
+  background: $white;
+  @include hover() {
+    color: $white;
+    background: $font_purple;
+  }
+}

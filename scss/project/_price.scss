@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+.p-price_inner {
+  padding: 100px 0 114px;
+}
+.p-price_table_container {
+  width: 1020px;
+  margin: 84px auto 0;
+  @include responsive(sp) {
+    width: 100%;
+    padding: 20px;
+    overflow-x: scroll;
+  }
+}
+.p-price_table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  .col_1 {
+    width: auto;
+  }
+  .col_2 {
+    width: 260px;
+  }
+  .col_3 {
+    width: 260px;
+  }
+  .col_4 {
+    width: 260px;
+  }
+  @include responsive(sp) {
+    width: 727px;
+    margin: 0 auto;
+    .col_2 {
+      width: 180px;
+    }
+    .col_3 {
+      width: 180px;
+    }
+    .col_4 {
+      width: 180px;
+    }
+  }
+}
+.p-price_table__head_cell--strong {
+  position: relative;
+}
+.p-price_plan {
+  color: $white;
+  background: $font_black;
+  height: 270px;
+  padding-bottom: 40px;
+  @include responsive(sp) {
+    height: 200px;
+    padding-bottom: 28px;
+  }
+}
+.p-price_plan--strong {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 286px;
+  background: $font_purple;
+  box-shadow: 0 4px 20px -5px rgba($color: #000000, $alpha: 0.6);
+  @include responsive(sp) {
+    height: 216px;
+  }
+}
+.p-price_plan__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+  height: 100%;
+  padding: 0 13px;
+  @include responsive(sp) {
+    padding: 0 7px;
+  }
+}
+.p-price_plan__title {
+  font-size: 24px;
+  font-weight: 700;
+  @include responsive(sp) {
+    font-size: 20px;
+  }
+}
+.p-price_plan__title--strong {
+  font-size: 28px;
+  font-weight: 700;
+  @include responsive(sp) {
+    font-size: 24px;
+  }
+}
+.p-price_plan__price {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 24px;
+  span {
+    font-size: 36px;
+  }
+  @include responsive(sp) {
+    font-size: 12px;
+    margin-top: 16px;
+    span {
+      font-size: 30px;
+    }
+  }
+}
+.p-price_plan__price--strong {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+  span {
+    font-size: 42px;
+  }
+  @include responsive(sp) {
+    font-size: 16px;
+    span {
+      font-size: 34px;
+    }
+  }
+}
+.p-price_button {
+  font-size: 18px;
+  width: 100%;
+  padding: 14px 0;
+  @include responsive(sp) {
+    font-size: 16px;
+    padding: 11px 0;
+  }
+}
+.p-price_plan__button {
+  color: $font_black;
+  background: $white;
+  border-color: $white;
+  margin-top: 30px;
+  @include hover() {
+    color: $white;
+    background: $font_black;
+  }
+  @include responsive(sp) {
+    margin-top: 24px;
+  }
+}
+.p-price_plan__button--strong {
+  border-color: $white;
+  margin-top: 30px;
+  @include responsive(sp) {
+    margin-top: 24px;
+  }
+}
+.p-price_table__body_row {
+  height: 60px;
+  background: $base_purple;
+  &:nth-child(2n) {
+    background: $white;
+  }
+}
+.p-price_table__body_cell {
+  vertical-align: middle;
+  padding: 0 32px;
+}
+.p-price_table__body_cell--th {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  @include responsive(sp) {
+    font-size: 15px;
+  }
+}
+.p-price_table__body_cell--td {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  @include responsive(sp) {
+    font-size: 14px;
+  }
+}
+.p-price_table__body_cell--strong {
+  font-size: 24px;
+  font-weight: 700;
+  @include responsive(sp) {
+    font-size: 20px;
+  }
+}
+.p-price_table__button_container {
+  padding: 17px 13px 0;
+  @include responsive(sp) {
+    padding: 7px;
+  }
+}
+.p-price_table__button {
+  color: $font_black;
+  background: $white;
+  border-color: $font_black;
+  @include hover() {
+    color: $white;
+    background: $font_black;
+  }
+}

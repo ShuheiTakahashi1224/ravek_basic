@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+.c-title {
+  width: 100%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+.c-title__sub {
+  color: $font_light_purple;
+  font-size: 36px;
+  @include responsive(sp) {
+    font-size: 22px;
+  }
+}
+.c-title__main {
+  color: $font_purple;
+  font-size: 48px;
+  margin-top: 18px;
+  @include responsive(sp) {
+    font-size: 30px;
+    line-height: 42px;
+    margin-top: 12px;
+  }
+}

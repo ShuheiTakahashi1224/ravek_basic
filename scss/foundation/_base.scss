@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap");
+
+$black: #000;
+$white: #fff;
+$font_black: #2d2d32;
+$font_purple: #64629d;
+$font_light_purple: #9f9ec1;
+$base_purple: #edecfc;
+$base_gray: #f9f9f9;
+
+$max_width_pc: 1200px;
+$max_width_sp: 335px;
+
+$header_height_pc: 72px;
+$header_height_sp: 52px;
+
+$header_index: 500;
+
+// breakpoints
+$breakpoints: (
+  "sp": (
+    max-width: 1199px,
+  ),
+  "pc": (
+    min-width: 1200px,
+  ),
+) !default;
+
+// responsive
+@mixin responsive($breakpoint) {
+  @media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+    @content;
+  }
+}
+
+// hover
+@mixin hover() {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+html,
+body {
+  color: $font_black;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: calc(32.4 / 18);
+}
+
+.is-pc {
+  @include responsive(sp) {
+    display: none !important;
+  }
+}
+.is-sp {
+  display: none;
+  @include responsive(sp) {
+    display: block !important;
+  }
+}
+
+.f-inner {
+  width: $max_width_pc;
+  margin: 0 auto;
+  @include responsive(sp) {
+    width: $max_width_sp;
+  }
+}

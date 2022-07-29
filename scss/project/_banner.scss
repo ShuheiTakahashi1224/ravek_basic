@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.p-banner {
+  background: $font_black;
+}
+.p-banner_inner {
+  padding: 60px 0;
+  @include responsive(sp) {
+    padding: 40px 0;
+  }
+}
+.p-banner__title {
+  color: $white;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: calc(52.1 / 36);
+  text-align: center;
+  @include responsive(sp) {
+    font-size: 18px;
+  }
+}
+.p-banner_button_container {
+  margin-top: 32px;
+  text-align: center;
+  @include responsive(sp) {
+    margin-top: 24px;
+  }
+}
+.p-banner_button {
+  font-size: 24px;
+  padding: 21px 51px;
+  @include responsive(sp) {
+    font-size: 18px;
+    padding: 16px 40px;
+  }
+}
